@@ -1,15 +1,15 @@
 public class MaquinaExpendedoraSimple {
     
     // El precio del billete
-    private int precioBillete;
+    private int precioBillete = 12;
     // La cantidad de dinero que lleva metida el cliente actual
     private int balanceClienteActual;
     // El total de dinero almacenado en la maquina desde su ultimo vaciado
     private int totalDineroAcumulado;
     // El origen del billete
-    private String estacionOrigen;
+    private String estacionOrigen = "León";
     // El destino del billete
-    private String estacionDestino;
+    private String estacionDestino = "Oviedo";
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
@@ -22,6 +22,19 @@ public class MaquinaExpendedoraSimple {
         totalDineroAcumulado = 0;
         estacionOrigen = "Leon";
         estacionDestino = "Oviedo";
+    }
+
+    /**
+     * Crea una maquina expendedora de billetes de tren con el 
+     * precio del billete y el origen y destino dados. Se asume que el precio
+     * del billete que se recibe es mayor que 0.
+     */
+    public MaquinaExpendedoraSimple(int precioDelBillete, String destino) {
+        precioBillete = precioDelBillete;
+        balanceClienteActual = 0;
+        totalDineroAcumulado = 0;
+        estacionOrigen = "Leon";
+        estacionDestino = destino;
     }
 
     /**
